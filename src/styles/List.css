@@ -1,0 +1,128 @@
+
+
+
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center align buttons vertically */
+  font-weight: bold;
+  margin-bottom: 12px; /* Added spacing below the header */
+}
+
+.list-header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333; /* Darker text for better readability */
+}
+
+.list-header button {
+  background-color: #0079bf; /* Primary button color */
+  color: white;
+  border: none;
+  padding: 12px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.list-header button:hover {
+  background-color: #005f8d; /* Darker color on hover */
+}
+
+.list-header button:active {
+  transform: scale(0.95); /* Subtle shrink effect on click */
+}
+
+.list-body {
+  margin-top: 12px;
+}
+
+.add-card {
+  margin-top: 16px;
+  text-align: center; /* Center-align the button */
+}
+
+.add-card button {
+  background-color: #5aac44; /* Green for add card button */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-card button:hover {
+  background-color: #519839; /* Slightly darker green on hover */
+}
+
+.add-card button:active {
+  transform: scale(0.95); /* Click feedback */
+}
+
+.list-edit-title {
+  display: flex;
+  gap: 8px;
+  align-items: center; /* Align the input and buttons */
+}
+
+.list-edit-title input {
+  flex: 1;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.list-edit-title input:focus {
+  border-color: #0079bf;
+  box-shadow: 0 0 4px rgba(0, 121, 191, 0.5);
+  outline: none;
+}
+
+.list-edit-title button {
+  background-color: #0079bf;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.list-edit-title button:hover {
+  background-color: #005f8d;
+}
+
+.list-hover {
+  background-color: #e3fcef; /* Subtle green to highlight the drop target */
+  border: 2px dashed #519839; /* Dashed border for a clear visual cue */
+}
+
+
+@media (max-width: 768px) {
+  .list {
+    width: 100%; /* Full width on smaller devices */
+    margin-right: 0; /* Remove side margin */
+    margin-bottom: 16px; /* Add spacing between lists */
+  }
+
+  .list-header {
+    flex-direction: column; /* Stack header elements */
+    gap: 8px; /* Add spacing */
+  }
+
+  .list-edit-title {
+    flex-direction: column; /* Stack input and buttons */
+  }
+
+  .add-card button {
+    width: 100%; /* Full-width button for smaller screens */
+  }
+}

@@ -1,0 +1,76 @@
+.card {
+  background-color: #fdfdfd; /* Slightly softer white for better contrast */
+  border: 1px solid #e0e0e0; /* Lighter border for a subtle look */
+  border-radius: 10px; /* Slightly more rounded corners for a modern feel */
+  padding: 16px; /* Increased padding for better spacing */
+  margin-bottom: 12px; /* Balanced spacing between cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for a polished look */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px); /* Adds a lifting effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px; /* Added spacing for clarity */
+}
+
+.card-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Consistent gap for edit inputs */
+}
+
+.card-edit input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #d0d0d0; /* Softer border for inputs */
+  border-radius: 6px; /* Slightly more rounded inputs */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-edit input:focus {
+  border-color: #0079bf; /* Blue border on focus for consistency */
+  box-shadow: 0 0 4px rgba(0, 121, 191, 0.5); /* Glow effect for focus */
+  outline: none; /* Remove default outline */
+}
+
+.card-edit-buttons {
+  display: flex;
+  gap: 10px; /* Balanced spacing between buttons */
+}
+
+.card-edit-buttons button {
+  padding: 8px 16px; /* Larger buttons for better usability */
+  font-size: 0.95rem; /* Slightly larger font for readability */
+  border: none;
+  border-radius: 6px; /* Rounded buttons for a friendly look */
+  cursor: pointer;
+  background-color: #0079bf; /* Primary blue color */
+  color: white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-edit-buttons button:hover {
+  background-color: #005f8d; /* Darker blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Hover shadow for better feedback */
+}
+
+.card-edit-buttons button:active {
+  transform: scale(0.95); /* Subtle shrink effect on click */
+}
+
+.card-edit-buttons .cancel-button {
+  background-color: #f5f5f5; /* Neutral background for cancel button */
+  color: #333; /* Dark text for cancel button */
+  border: 1px solid #d0d0d0; /* Subtle border for cancel button */
+}
+
+.card-edit-buttons .cancel-button:hover {
+  background-color: #e0e0e0; /* Slightly darker background on hover */
+}

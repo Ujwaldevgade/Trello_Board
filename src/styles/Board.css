@@ -1,0 +1,93 @@
+.board {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center align the button */
+  padding: 20px;
+  background-color: #f4f5f7; /* Light board background */
+  min-height: 100vh; /* Full height for the board */
+  gap: 20px; /* Space between sections */
+}
+
+.board-header {
+  width: 100%; /* Full width */
+  text-align: center; /* Center the "Add List" button */
+  padding: 10px 0;
+  border-bottom: 2px solid #0079bf; /* Underline effect */
+}
+
+.board-header button {
+  padding: 12px 24px;
+  background-color: #0079bf;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Fully rounded button */
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+.board-header button:hover {
+  background-color: #005f8d;
+  transform: translateY(-3px); /* Hover lift effect */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.board-header button:active {
+  background-color: #00476a;
+  transform: scale(0.98); /* Press effect */
+}
+
+.board-body {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to prevent horizontal scrolling */
+  justify-content: center; /* Center the lists/cards */
+  gap: 20px; /* Space between lists */
+  width: 100%; /* Full width */
+}
+
+.list-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px; /* Fixed width for each list */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Hover lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Emphasized shadow */
+}
+
+.card:active {
+  transform: scale(0.98); /* Press effect */
+}
+
+@media (max-width: 768px) {
+  .board-body {
+    flex-direction: column; /* Stack lists vertically on smaller screens */
+  }
+
+  .list-container {
+    width: 90%; /* Make lists adapt to smaller screen sizes */
+  }
+
+  .board-header button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
